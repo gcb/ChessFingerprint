@@ -1,8 +1,11 @@
 .PHONY: test
-test: build
-	./main
+test: target/debug/chess_fingerprint
+	./$^
 
-.PHONY: build
-build: main
-	rustc main.rs
 
+target/debug/chess_fingerprint: src/main.rs
+	cargo build
+
+.PHONY: clean
+clean:
+	cargo clean
