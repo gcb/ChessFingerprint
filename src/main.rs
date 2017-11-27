@@ -87,6 +87,21 @@ fn fen_to_board (input_str: &str) -> [[char; 8]; 8] {
     }
     return out;
 }
+#[test]
+fn test_fen_to_board(){
+    assert_eq!( fen_to_board("rnbqkbnr/pp1ppppp/8/2p5/4P3/5N2/PPPP1PPP/RNBQKB1R b KQkq - 1 2"),
+        [
+        ['♖', '♘', '♗', '♕', '♔', '♗', '♘', '♖'],
+        ['♙', '♙', ' ', '♙', '♙', '♙', '♙', '♙'],
+        [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
+        [' ', ' ', '♙', ' ', ' ', ' ', ' ', ' '],
+        [' ', ' ', ' ', ' ', '♟', ' ', ' ', ' '],
+        [' ', ' ', ' ', ' ', ' ', '♞', ' ', ' '],
+        ['♟', '♟', '♟', '♟', ' ', '♟', '♟', '♟'],
+        ['♜', '♞', '♝', '♛', '♚', '♝', ' ', '♜']
+        ]
+    );
+}
 
 
 /** naive map to the UTF-8 chars we want to draw **/
@@ -109,4 +124,10 @@ fn piece_from_char( input_char :char ) -> char {
         _ => ' '
     }
 
+}
+
+#[test]
+fn test_piece_from_char(){
+    assert_eq!( piece_from_char('q'), '♕');
+    assert_eq!( piece_from_char('j'), ' ');
 }

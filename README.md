@@ -5,6 +5,21 @@ Using chess games instead of random numbers or abstract ascii art for humans to 
 
 based on the original abstract art idea on [Announce: OpenSSH 5.1 released](http://lists.mindrot.org/pipermail/openssh-unix-dev/2008-July/026693.html)
 
+```
+from this:              to this:            or this (no color out of terminal):
++---[RSA 2048]----+    +---[RSA 2048]----+   Richard
+| =+o...+=o..     |    |8                | : | : | : | : |
+|o++... *o .      |    |7                | | : | : | : | :
+|*.o.  *o.        |    |6  k p           | : |♚:♟| : | : |
+|oo.  ..o.= .     |    |5      R         | | : | :♖| : | :
+|.+o. .. S =      |    |4                | : | : | : | : |
+|*=+ .  o = .     |    |3                | | : | : | : | :
+|OE .  . o        |    |2                | :♔| : | : | : |
+| o     .         |    |1K               |
+|                 |    | a b c d e f g h |  William
++----[SHA256]-----+    +----[SHA256]-----+
+```
+
 Entropy
 =======
 
